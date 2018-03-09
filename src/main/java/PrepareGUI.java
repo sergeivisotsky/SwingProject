@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-import static javax.swing.LayoutStyle.*;
+import static javax.swing.LayoutStyle.ComponentPlacement;
 
 public class PrepareGUI extends JFrame {
 
@@ -10,6 +10,7 @@ public class PrepareGUI extends JFrame {
     }
 
     private GlobalFields fields = new GlobalFields();
+
     private void prepareWindow() {
 
         fields.jTextField1 = new JTextField();
