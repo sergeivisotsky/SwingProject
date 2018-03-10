@@ -11,7 +11,7 @@ public class PrepareGUI extends JFrame {
         prepareWindow();
     }
 
-    private GlobalFields fields = new GlobalFields();
+    public GlobalFields fields = new GlobalFields();
     private Activities fieldsActivities = new Activities();
 
     private void prepareWindow() {
@@ -80,6 +80,7 @@ public class PrepareGUI extends JFrame {
                                 .jTextFieldAddTextActionPerformed(e);
                     }
                 });
+
 
         /*fields.jList1.addActionListener(new ActionListener() {
             @Override

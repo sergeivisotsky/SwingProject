@@ -1,10 +1,13 @@
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 
 public class Activities {
-//    PrepareGUI guiElements = new PrepareGUI();
+//    private PrepareGUI guiElements = new PrepareGUI();
 
     public void jButtonAddActionPerformed(ActionEvent e) {
-
+//        DefaultListModel listModel = new DefaultListModel();
+//        JList insertIntoList = new JList(listModel);
+//        listModel.addElement(guiElements.fields.jList1.getText());
     }
 
     public void jButtonRunActionPerformed(ActionEvent e) {
