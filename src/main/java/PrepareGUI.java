@@ -16,73 +16,82 @@ public class PrepareGUI extends JFrame {
 
     private void prepareWindow() {
 
-        fields.jTextField1 = new JTextField();
-        fields.jButton1 = new JButton();
-        fields.jButton2 = new JButton();
+        fields.jTextFieldAddText = new JTextField();
+        fields.jButtonAdd = new JButton();
+        fields.jButtonRun = new JButton();
         fields.jScrollPane1 = new JScrollPane();
         fields.jList1 = new JList();
         fields.jScrollPane2 = new JScrollPane();
         fields.jList2 = new JList();
-        fields.jButton4 = new JButton();
-        fields.jButton3 = new JButton();
+        fields.jButtonDelete = new JButton();
+        fields.jButtonClear = new JButton();
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
+        fields.jButtonAdd.setText("Add");
+        fields.jButtonAdd
+                .addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        fieldsActivities
+                                .jButtonAddActionPerformed(e);
+                    }
+                });
 
-        fields.jButton1.setText("Add");
-        fields.jButton1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                fieldsActivities.jButton1ActionPerformed(e);
-            }
-        });
-
-        fields.jButton2.setText("Run");
-        fields.jButton2.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                fieldsActivities.jButton2ActionPerformed(e);
-            }
-        });
+        fields.jButtonRun.setText("Run");
+        fields.jButtonRun
+                .addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        fieldsActivities
+                                .jButtonRunActionPerformed(e);
+                    }
+                });
 
         fields.jScrollPane1.setViewportView(fields.jList1);
 
         fields.jScrollPane2.setViewportView(fields.jList2);
 
-        fields.jButton4.setText("Delete");
-        fields.jButton4.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                fieldsActivities.jButton4ActionPerformed(e);
-            }
-        });
+        fields.jButtonDelete.setText("Delete");
+        fields.jButtonDelete
+                .addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        fieldsActivities
+                                .jButtonDeleteActionPerformed(e);
+                    }
+                });
 
-        fields.jButton3.setText("Clear");
-        fields.jButton3.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                fieldsActivities.jButton3ActionPerformed(e);
-            }
-        });
+        fields.jButtonClear.setText("Clear");
+        fields.jButtonClear
+                .addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        fieldsActivities
+                                .jButtonClearActionPerformed(e);
+                    }
+                });
 
-        fields.jTextField1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                fieldsActivities.jTextField1ActionPerformed(e);
-            }
-        });
+        fields.jTextFieldAddText
+                .addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        fieldsActivities
+                                .jTextFieldAddTextActionPerformed(e);
+                    }
+                });
 
         /*fields.jList1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                fieldsActivities.jTextField1ActionPerformed(e);
+                fieldsActivities.jTextFieldAddTextActionPerformed(e);
             }
         });
 
-        fields.jTextField1.addActionListener(new ActionListener() {
+        fields.jTextFieldAddText.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                fieldsActivities.jTextField1ActionPerformed(e);
+                fieldsActivities.jTextFieldAddTextActionPerformed(e);
             }
         });*/
 
@@ -93,7 +102,7 @@ public class PrepareGUI extends JFrame {
                         .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
                                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                                        .addComponent(fields.jTextField1)
+                                        .addComponent(fields.jTextFieldAddText)
                                         .addGroup(layout.createSequentialGroup()
                                                 .addComponent(fields.jScrollPane1, GroupLayout.PREFERRED_SIZE, 142, GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(ComponentPlacement.RELATED)
@@ -101,34 +110,34 @@ public class PrepareGUI extends JFrame {
                                 .addContainerGap())
                         .addGroup(layout.createSequentialGroup()
                                 .addGap(71, 71, 71)
-                                .addComponent(fields.jButton1, GroupLayout.PREFERRED_SIZE, 81, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(fields.jButtonAdd, GroupLayout.PREFERRED_SIZE, 81, GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(ComponentPlacement.RELATED)
-                                .addComponent(fields.jButton2, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(fields.jButtonRun, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap(71, Short.MAX_VALUE))
                         .addGroup(GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(fields.jButton4, GroupLayout.PREFERRED_SIZE, 81, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(fields.jButtonDelete, GroupLayout.PREFERRED_SIZE, 81, GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(ComponentPlacement.RELATED)
-                                .addComponent(fields.jButton3, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(fields.jButtonClear, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
                                 .addGap(69, 69, 69))
         );
         layout.setVerticalGroup(
                 layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(fields.jTextField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(fields.jTextFieldAddText, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                        .addComponent(fields.jButton1, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(fields.jButton2, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(fields.jButtonAdd, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fields.jButtonRun, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
                                         .addComponent(fields.jScrollPane1)
                                         .addComponent(fields.jScrollPane2, GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE))
                                 .addPreferredGap(ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                        .addComponent(fields.jButton4, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(fields.jButton3, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(fields.jButtonDelete, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fields.jButtonClear, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE))
                                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
