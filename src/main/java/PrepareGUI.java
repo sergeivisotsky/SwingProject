@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import static javax.swing.LayoutStyle.ComponentPlacement;
 
@@ -10,6 +12,7 @@ public class PrepareGUI extends JFrame {
     }
 
     private GlobalFields fields = new GlobalFields();
+    private Activities fieldsActivities = new Activities();
 
     private void prepareWindow() {
 
@@ -25,17 +28,63 @@ public class PrepareGUI extends JFrame {
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
+
         fields.jButton1.setText("Add");
+        fields.jButton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                fieldsActivities.jButton1ActionPerformed(e);
+            }
+        });
 
         fields.jButton2.setText("Run");
+        fields.jButton2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                fieldsActivities.jButton2ActionPerformed(e);
+            }
+        });
 
         fields.jScrollPane1.setViewportView(fields.jList1);
 
         fields.jScrollPane2.setViewportView(fields.jList2);
 
         fields.jButton4.setText("Delete");
+        fields.jButton4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                fieldsActivities.jButton4ActionPerformed(e);
+            }
+        });
 
         fields.jButton3.setText("Clear");
+        fields.jButton3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                fieldsActivities.jButton3ActionPerformed(e);
+            }
+        });
+
+        fields.jTextField1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                fieldsActivities.jTextField1ActionPerformed(e);
+            }
+        });
+
+        /*fields.jList1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                fieldsActivities.jTextField1ActionPerformed(e);
+            }
+        });
+
+        fields.jTextField1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                fieldsActivities.jTextField1ActionPerformed(e);
+            }
+        });*/
 
         GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
