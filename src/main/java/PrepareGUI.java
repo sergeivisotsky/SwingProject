@@ -11,7 +11,7 @@ public class PrepareGUI extends JFrame {
         prepareWindow();
     }
 
-    public GlobalFields fields = new GlobalFields();
+    public static GlobalFields fields = new GlobalFields();
     private Activities fieldsActivities = new Activities();
 
     private void prepareWindow() {
@@ -20,9 +20,9 @@ public class PrepareGUI extends JFrame {
         fields.jButtonAdd = new JButton();
         fields.jButtonRun = new JButton();
         fields.jScrollPane1 = new JScrollPane();
-        fields.jList1 = new JList();
+        fields.jListAdd = new JList();
         fields.jScrollPane2 = new JScrollPane();
-        fields.jList2 = new JList();
+        fields.jListResult = new JList();
         fields.jButtonDelete = new JButton();
         fields.jButtonClear = new JButton();
 
@@ -34,7 +34,8 @@ public class PrepareGUI extends JFrame {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         fieldsActivities
-                                .jButtonAddActionPerformed(e);
+                                .jButtonAddActionPerformed(
+                                        fields.jTextFieldAddText.getText());
                     }
                 });
 
@@ -48,9 +49,9 @@ public class PrepareGUI extends JFrame {
                     }
                 });
 
-        fields.jScrollPane1.setViewportView(fields.jList1);
+        fields.jScrollPane1.setViewportView(fields.jListAdd);
 
-        fields.jScrollPane2.setViewportView(fields.jList2);
+        fields.jScrollPane2.setViewportView(fields.jListResult);
 
         fields.jButtonDelete.setText("Delete");
         fields.jButtonDelete
@@ -82,7 +83,7 @@ public class PrepareGUI extends JFrame {
                 });
 
 
-        /*fields.jList1.addActionListener(new ActionListener() {
+        /*fields.jListAdd.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 fieldsActivities.jTextFieldAddTextActionPerformed(e);

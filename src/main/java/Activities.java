@@ -2,12 +2,12 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 
 public class Activities {
-//    private PrepareGUI guiElements = new PrepareGUI();
+    private DefaultListModel model = new DefaultListModel();
 
-    public void jButtonAddActionPerformed(ActionEvent e) {
-//        DefaultListModel listModel = new DefaultListModel();
-//        JList insertIntoList = new JList(listModel);
-//        listModel.addElement(guiElements.fields.jList1.getText());
+
+    public void jButtonAddActionPerformed(Object textToBeAdded) {
+        PrepareGUI.fields.jListAdd.setModel(model);
+        model.addElement(textToBeAdded);
     }
 
     public void jButtonRunActionPerformed(ActionEvent e) {
