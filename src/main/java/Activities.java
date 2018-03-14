@@ -4,19 +4,21 @@ import java.awt.event.ActionEvent;
 public class Activities {
     private DefaultListModel model = new DefaultListModel();
 
-
     public void jButtonAddActionPerformed(Object textToBeAdded) {
         PrepareGUI.fields.jListAdd.setModel(model);
         model.addElement(textToBeAdded);
     }
 
-    public void jButtonRunActionPerformed(ActionEvent e) {
+    public void jButtonRunActionPerformed(Object textToBeModified) {
+        PrepareGUI.fields.jListResult.setModel(model);
+//        model.addElement(textToBeModified);
     }
 
-    public void jButtonDeleteActionPerformed(ActionEvent e) {
+    public void jButtonDeleteActionPerformed() {
+        model.removeAllElements();
     }
 
-    public void jButtonClearActionPerformed(ActionEvent e) {
+    public void jButtonClearActionPerformed() {
     }
 
     public void jTextFieldAddTextActionPerformed(ActionEvent e) {

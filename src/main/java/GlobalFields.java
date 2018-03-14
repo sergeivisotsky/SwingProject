@@ -7,7 +7,7 @@ public class GlobalFields {
     public JButton jButtonDelete;
     public JList jListAdd;
     public JList jListResult;
-    public JScrollPane jScrollPane1;
-    public JScrollPane jScrollPane2;
+    public JScrollPane jScrollPaneForAdd;
+    public JScrollPane jScrollPaneResult;
     public JTextField jTextFieldAddText;
 }

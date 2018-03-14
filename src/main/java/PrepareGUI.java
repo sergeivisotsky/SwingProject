@@ -19,9 +19,9 @@ public class PrepareGUI extends JFrame {
         fields.jTextFieldAddText = new JTextField();
         fields.jButtonAdd = new JButton();
         fields.jButtonRun = new JButton();
-        fields.jScrollPane1 = new JScrollPane();
+        fields.jScrollPaneForAdd = new JScrollPane();
         fields.jListAdd = new JList();
-        fields.jScrollPane2 = new JScrollPane();
+        fields.jScrollPaneResult = new JScrollPane();
         fields.jListResult = new JList();
         fields.jButtonDelete = new JButton();
         fields.jButtonClear = new JButton();
@@ -30,28 +30,33 @@ public class PrepareGUI extends JFrame {
 
         fields.jButtonAdd.setText("Add");
         fields.jButtonAdd
-                .addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        fieldsActivities
-                                .jButtonAddActionPerformed(
-                                        fields.jTextFieldAddText.getText());
-                    }
-                });
+                .addActionListener(
+                        new ActionListener() {
+                            @Override
+                            public void actionPerformed(ActionEvent e) {
+                                fieldsActivities
+                                        .jButtonAddActionPerformed(fields
+                                                .jTextFieldAddText
+                                                .getText());
+                            }
+                        });
 
         fields.jButtonRun.setText("Run");
         fields.jButtonRun
                 .addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        fieldsActivities
-                                .jButtonRunActionPerformed(e);
+                        for (int i = 0; i < fields.jListAdd.getModel().getSize(); i++) {
+                            fieldsActivities
+                                    .jButtonRunActionPerformed(fields
+                                    .jListAdd.getModel().getElementAt(i));
+                        }
                     }
                 });
 
-        fields.jScrollPane1.setViewportView(fields.jListAdd);
+        fields.jScrollPaneForAdd.setViewportView(fields.jListAdd);
 
-        fields.jScrollPane2.setViewportView(fields.jListResult);
+        fields.jScrollPaneResult.setViewportView(fields.jListResult);
 
         fields.jButtonDelete.setText("Delete");
         fields.jButtonDelete
@@ -59,7 +64,7 @@ public class PrepareGUI extends JFrame {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         fieldsActivities
-                                .jButtonDeleteActionPerformed(e);
+                                .jButtonDeleteActionPerformed();
                     }
                 });
 
@@ -69,7 +74,7 @@ public class PrepareGUI extends JFrame {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         fieldsActivities
-                                .jButtonClearActionPerformed(e);
+                                .jButtonClearActionPerformed();
                     }
                 });
 
@@ -106,9 +111,9 @@ public class PrepareGUI extends JFrame {
                                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                                         .addComponent(fields.jTextFieldAddText)
                                         .addGroup(layout.createSequentialGroup()
-                                                .addComponent(fields.jScrollPane1, GroupLayout.PREFERRED_SIZE, 142, GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(fields.jScrollPaneForAdd, GroupLayout.PREFERRED_SIZE, 142, GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(ComponentPlacement.RELATED)
-                                                .addComponent(fields.jScrollPane2, GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                                                .addComponent(fields.jScrollPaneResult, GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
                                 .addContainerGap())
                         .addGroup(layout.createSequentialGroup()
                                 .addGap(71, 71, 71)
@@ -134,8 +139,8 @@ public class PrepareGUI extends JFrame {
                                         .addComponent(fields.jButtonRun, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(fields.jScrollPane1)
-                                        .addComponent(fields.jScrollPane2, GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE))
+                                        .addComponent(fields.jScrollPaneForAdd)
+                                        .addComponent(fields.jScrollPaneResult, GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE))
                                 .addPreferredGap(ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
                                         .addComponent(fields.jButtonDelete, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
