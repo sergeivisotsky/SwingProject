@@ -12,10 +12,10 @@ public class Activities {
 
     public void jButtonRunActionPerformed(Object textToBeModified) {
         PrepareGUI.fields.jListResult.setModel(secondModel);
-        String modifiedText =
+        Object modifiedText =
                 textToBeModified
                         .toString()
-                        .replaceAll("\\[.*?\\]","1");
+                        .replaceAll("\\(.*\\)", " ");
         secondModel.addElement(modifiedText);
     }
 
