@@ -15,7 +15,7 @@ public class Activities {
         String modifiedText =
                 textToBeModified
                         .toString()
-                        .replaceAll("\\[.*?\\]","111");
+                        .replaceAll("\\[.*?\\]","1");
         secondModel.addElement(modifiedText);
     }
 
