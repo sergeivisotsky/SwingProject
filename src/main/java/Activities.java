@@ -11,8 +11,12 @@ public class Activities {
     }
 
     public void jButtonRunActionPerformed(Object textToBeModified) {
-        PrepareGUI.fields.jListResult.setModel(model);
-        secondModel.addElement(textToBeModified);
+        PrepareGUI.fields.jListResult.setModel(secondModel);
+        String modifiedText =
+                textToBeModified
+                        .toString()
+                        .replaceAll("\\[.*?\\]","111");
+        secondModel.addElement(modifiedText);
     }
 
     public void jButtonDeleteActionPerformed() {
@@ -21,7 +25,7 @@ public class Activities {
     }
 
     public void jButtonClearActionPerformed() {
-            secondModel.removeAllElements();
+        secondModel.removeAllElements();
     }
 
     public void jTextFieldAddTextActionPerformed(ActionEvent e) {

@@ -46,10 +46,11 @@ public class PrepareGUI extends JFrame {
                 .addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        for (int i = 0; i < fields.jListAdd.getModel().getSize(); i++) {
+                        for (int i = 0; i < fields.jListAdd
+                                .getModel().getSize(); i++) {
                             fieldsActivities
-                                    .jButtonRunActionPerformed(fields
-                                    .jListAdd.getModel().getElementAt(i));
+                                    .jButtonRunActionPerformed(fields.jListAdd
+                                            .getModel().getElementAt(i));
                         }
                     }
                 });
