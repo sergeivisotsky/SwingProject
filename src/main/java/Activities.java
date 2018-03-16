@@ -10,13 +10,14 @@ public class Activities {
         model.addElement(textToBeAdded);
     }
 
-    public void jButtonRunActionPerformed(Object textToBeModified) {
+    public Object jButtonRunActionPerformed(Object textToBeModified) {
         PrepareGUI.fields.jListResult.setModel(secondModel);
         Object modifiedText =
                 textToBeModified
                         .toString()
                         .replaceAll("\\s*\\([^\\)]*\\)\\s*", " ");
         secondModel.addElement(modifiedText);
+        return modifiedText;
     }
 
     public void jButtonDeleteActionPerformed() {

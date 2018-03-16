@@ -4,12 +4,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ActivitiesTest {
 
-    Activities activities = new Activities();
+    private Activities activities = new Activities();
 
     @Test
     void jButtonRunActionPerformed() {
-        String expectedValue = "1";
-//        String actualValue = activities.jButtonRunActionPerformed(expectedValue);
-//        assertEquals(expectedValue, actualValue);
+        Object expectedValue = "*3+ /2";
+        Object actualValue = activities.jButtonRunActionPerformed("(1+2)*3+(5-2)/2");
+        assertEquals(expectedValue, actualValue);
     }
 }
