@@ -43,17 +43,18 @@ public class PrepareGUI extends JFrame {
 
         fields.jButtonRun.setText("Run");
         fields.jButtonRun
-                .addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        for (int i = 0; i < fields.jListAdd
-                                .getModel().getSize(); i++) {
-                            fieldsActivities
-                                    .jButtonRunActionPerformed(fields.jListAdd
-                                            .getModel().getElementAt(i));
-                        }
-                    }
-                });
+                .addActionListener(
+                        new ActionListener() {
+                            @Override
+                            public void actionPerformed(ActionEvent e) {
+                                for (int i = 0; i < fields.jListAdd
+                                        .getModel().getSize(); i++) {
+                                    fieldsActivities
+                                            .jButtonRunActionPerformed(fields.jListAdd
+                                                    .getModel().getElementAt(i));
+                                }
+                            }
+                        });
 
         fields.jScrollPaneForAdd.setViewportView(fields.jListAdd);
 
@@ -61,47 +62,35 @@ public class PrepareGUI extends JFrame {
 
         fields.jButtonDelete.setText("Delete");
         fields.jButtonDelete
-                .addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        fieldsActivities
-                                .jButtonDeleteActionPerformed();
-                    }
-                });
+                .addActionListener(
+                        new ActionListener() {
+                            @Override
+                            public void actionPerformed(ActionEvent e) {
+                                fieldsActivities
+                                        .jButtonDeleteActionPerformed();
+                            }
+                        });
 
         fields.jButtonClear.setText("Clear");
         fields.jButtonClear
-                .addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        fieldsActivities
-                                .jButtonClearActionPerformed();
-                    }
-                });
+                .addActionListener(
+                        new ActionListener() {
+                            @Override
+                            public void actionPerformed(ActionEvent e) {
+                                fieldsActivities
+                                        .jButtonClearActionPerformed();
+                            }
+                        });
 
         fields.jTextFieldAddText
-                .addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        fieldsActivities
-                                .jTextFieldAddTextActionPerformed(e);
-                    }
-                });
-
-
-        /*fields.jListAdd.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                fieldsActivities.jTextFieldAddTextActionPerformed(e);
-            }
-        });
-
-        fields.jTextFieldAddText.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                fieldsActivities.jTextFieldAddTextActionPerformed(e);
-            }
-        });*/
+                .addActionListener(
+                        new ActionListener() {
+                            @Override
+                            public void actionPerformed(ActionEvent e) {
+                                fieldsActivities
+                                        .jTextFieldAddTextActionPerformed(e);
+                            }
+                        });
 
         GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

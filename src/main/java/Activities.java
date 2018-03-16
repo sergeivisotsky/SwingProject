@@ -15,7 +15,7 @@ public class Activities {
         Object modifiedText =
                 textToBeModified
                         .toString()
-                        .replaceAll("\\(.*\\)", " ");
+                        .replaceAll("\\s*\\([^\\)]*\\)\\s*", " ");
         secondModel.addElement(modifiedText);
     }
 
