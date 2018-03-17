@@ -1,2 +1,2 @@
-# SymbolStrings
-Algorithmization and programming exercises connected with the symbol strings
+# Java Swing
+Java Swing study
