@@ -31,28 +31,20 @@ public class PrepareGUI extends JFrame {
         fields.jButtonAdd.setText("Add");
         fields.jButtonAdd
                 .addActionListener(
-                        new ActionListener() {
-                            @Override
-                            public void actionPerformed(ActionEvent e) {
-                                fieldsActivities
-                                        .jButtonAddActionPerformed(fields
-                                                .jTextFieldAddText
-                                                .getText());
-                            }
-                        });
+                        e -> fieldsActivities
+                                .jButtonAddActionPerformed(fields
+                                        .jTextFieldAddText
+                                        .getText()));
 
         fields.jButtonRun.setText("Run");
         fields.jButtonRun
                 .addActionListener(
-                        new ActionListener() {
-                            @Override
-                            public void actionPerformed(ActionEvent e) {
-                                for (int i = 0; i < fields.jListAdd
-                                        .getModel().getSize(); i++) {
-                                    fieldsActivities
-                                            .jButtonRunActionPerformed(fields.jListAdd
-                                                    .getModel().getElementAt(i));
-                                }
+                        e -> {
+                            for (int i = 0; i < fields.jListAdd
+                                    .getModel().getSize(); i++) {
+                                fieldsActivities
+                                        .jButtonRunActionPerformed(fields.jListAdd
+                                                .getModel().getElementAt(i));
                             }
                         });
 
@@ -63,34 +55,19 @@ public class PrepareGUI extends JFrame {
         fields.jButtonDelete.setText("Delete");
         fields.jButtonDelete
                 .addActionListener(
-                        new ActionListener() {
-                            @Override
-                            public void actionPerformed(ActionEvent e) {
-                                fieldsActivities
-                                        .jButtonDeleteActionPerformed();
-                            }
-                        });
+                        e -> fieldsActivities
+                                .jButtonDeleteActionPerformed());
 
         fields.jButtonClear.setText("Clear");
         fields.jButtonClear
                 .addActionListener(
-                        new ActionListener() {
-                            @Override
-                            public void actionPerformed(ActionEvent e) {
-                                fieldsActivities
-                                        .jButtonClearActionPerformed();
-                            }
-                        });
+                        e -> fieldsActivities
+                                .jButtonClearActionPerformed());
 
         fields.jTextFieldAddText
                 .addActionListener(
-                        new ActionListener() {
-                            @Override
-                            public void actionPerformed(ActionEvent e) {
-                                fieldsActivities
-                                        .jTextFieldAddTextActionPerformed(e);
-                            }
-                        });
+                        e -> fieldsActivities
+                                .jTextFieldAddTextActionPerformed(e));
 
         GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -167,10 +144,8 @@ public class PrepareGUI extends JFrame {
     }
 
     public static void main(String[] args) {
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new PrepareGUI().setVisible(true);
-            }
-        });
+        EventQueue.invokeLater(
+                () -> new PrepareGUI().setVisible(true)
+        );
     }
 }
