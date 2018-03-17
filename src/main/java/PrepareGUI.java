@@ -101,40 +101,65 @@ public class PrepareGUI extends JFrame {
                                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                                         .addComponent(fields.jTextFieldAddText)
                                         .addGroup(layout.createSequentialGroup()
-                                                .addComponent(fields.jScrollPaneForAdd, GroupLayout.PREFERRED_SIZE, 142, GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(fields.jScrollPaneForAdd,
+                                                        GroupLayout.PREFERRED_SIZE, 142,
+                                                        GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(ComponentPlacement.RELATED)
-                                                .addComponent(fields.jScrollPaneResult, GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                                                .addComponent(fields.jScrollPaneResult,
+                                                        GroupLayout.PREFERRED_SIZE, 0,
+                                                        Short.MAX_VALUE)))
                                 .addContainerGap())
                         .addGroup(layout.createSequentialGroup()
                                 .addGap(71, 71, 71)
-                                .addComponent(fields.jButtonAdd, GroupLayout.PREFERRED_SIZE, 81, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(fields.jButtonAdd,
+                                        GroupLayout.PREFERRED_SIZE, 81,
+                                        GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(ComponentPlacement.RELATED)
-                                .addComponent(fields.jButtonRun, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(fields.jButtonRun,
+                                        GroupLayout.PREFERRED_SIZE, 80,
+                                        GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap(71, Short.MAX_VALUE))
                         .addGroup(GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(fields.jButtonDelete, GroupLayout.PREFERRED_SIZE, 81, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(fields.jButtonDelete,
+                                        GroupLayout.PREFERRED_SIZE, 81,
+                                        GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(ComponentPlacement.RELATED)
-                                .addComponent(fields.jButtonClear, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(fields.jButtonClear,
+                                        GroupLayout.PREFERRED_SIZE, 80,
+                                        GroupLayout.PREFERRED_SIZE)
                                 .addGap(69, 69, 69))
         );
         layout.setVerticalGroup(
                 layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(fields.jTextFieldAddText, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(fields.jTextFieldAddText,
+                                        GroupLayout.PREFERRED_SIZE,
+                                        GroupLayout.DEFAULT_SIZE,
+                                        GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                        .addComponent(fields.jButtonAdd, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(fields.jButtonRun, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(fields.jButtonAdd,
+                                                GroupLayout.PREFERRED_SIZE, 34,
+                                                GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fields.jButtonRun,
+                                                GroupLayout.PREFERRED_SIZE, 34,
+                                                GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
                                         .addComponent(fields.jScrollPaneForAdd)
-                                        .addComponent(fields.jScrollPaneResult, GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE))
+                                        .addComponent(fields.jScrollPaneResult,
+                                                GroupLayout.DEFAULT_SIZE, 189,
+                                                Short.MAX_VALUE))
                                 .addPreferredGap(ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                        .addComponent(fields.jButtonDelete, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(fields.jButtonClear, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(fields.jButtonDelete,
+                                                GroupLayout.PREFERRED_SIZE, 34,
+                                                GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fields.jButtonClear,
+                                                GroupLayout.PREFERRED_SIZE, 34,
+                                                GroupLayout.PREFERRED_SIZE))
                                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
