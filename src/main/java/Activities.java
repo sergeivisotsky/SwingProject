@@ -21,12 +21,11 @@ public class Activities {
     }
 
     public void jButtonDeleteActionPerformed() {
-        model.removeAllElements();
-        secondModel.removeAllElements();
+        model.clear();
     }
 
     public void jButtonClearActionPerformed() {
-        secondModel.removeAllElements();
+        secondModel.clear();
     }
 
     public void jTextFieldAddTextActionPerformed(ActionEvent e) {
