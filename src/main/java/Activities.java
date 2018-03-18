@@ -20,7 +20,7 @@ public class Activities {
                             .getModel()
                             .getElementAt(i)
                             .toString()
-                            .replaceAll("\\s*\\([^\\)]*\\)\\s*", " ");
+                            .replaceAll("\\s*\\([^)]*\\)\\s*", " ");
         }
         secondModel.addElement(modifiedText);
     }
