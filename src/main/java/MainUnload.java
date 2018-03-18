@@ -4,5 +4,6 @@ public class MainUnload {
         window.setTitle("String convertion");
         window.setLocationRelativeTo(null);
         window.setVisible(true);
+        window.setResizable(false);
     }
 }
