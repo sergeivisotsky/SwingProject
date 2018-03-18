@@ -2,26 +2,32 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 
 public class Activities {
-    private DefaultListModel model = new DefaultListModel();
-    private DefaultListModel secondModel = new DefaultListModel();
+    private DefaultListModel<String> firstModel = new DefaultListModel<>();
+    private DefaultListModel<String> secondModel = new DefaultListModel<>();
 
-    public void jButtonAddActionPerformed(Object textToBeAdded) {
-        PrepareGUI.fields.jListAdd.setModel(model);
-        model.addElement(textToBeAdded);
+    public void jButtonAddActionPerformed() {
+        PrepareGUI.fields.jListAdd.setModel(firstModel);
+        firstModel.addElement(
+                PrepareGUI.fields.jTextFieldAddText.getText());
+        PrepareGUI.fields.jTextFieldAddText.setText(null);
     }
 
-    public Object jButtonRunActionPerformed(Object textToBeModified) {
+    public void jButtonRunActionPerformed() {
         PrepareGUI.fields.jListResult.setModel(secondModel);
-        Object modifiedText =
-                textToBeModified
-                        .toString()
-                        .replaceAll("\\s*\\([^\\)]*\\)\\s*", " ");
+        String modifiedText = null;
+        for (int i = 0; i < PrepareGUI.fields.jListAdd.getModel().getSize(); i++) {
+            modifiedText = PrepareGUI.fields.jListAdd
+                            .getModel()
+                            .getElementAt(i)
+                            .toString()
+                            .replaceAll("\\s*\\([^\\)]*\\)\\s*", " ");
+
+        }
         secondModel.addElement(modifiedText);
-        return modifiedText;
     }
 
     public void jButtonDeleteActionPerformed() {
-        model.clear();
+        firstModel.clear();
     }
 
     public void jButtonClearActionPerformed() {

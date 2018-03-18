@@ -30,21 +30,13 @@ public class PrepareGUI extends JFrame {
         fields.jButtonAdd
                 .addActionListener(
                         e -> fieldsActivities
-                                .jButtonAddActionPerformed(fields
-                                        .jTextFieldAddText
-                                        .getText()));
+                                .jButtonAddActionPerformed());
 
         fields.jButtonRun.setText("Run");
         fields.jButtonRun
                 .addActionListener(
-                        e -> {
-                            for (int i = 0; i < fields.jListAdd
-                                    .getModel().getSize(); i++) {
-                                fieldsActivities
-                                        .jButtonRunActionPerformed(fields.jListAdd
-                                                .getModel().getElementAt(i));
-                            }
-                        });
+                        e -> fieldsActivities
+                                .jButtonRunActionPerformed());
 
         fields.jScrollPaneForAdd.setViewportView(fields.jListAdd);
 
