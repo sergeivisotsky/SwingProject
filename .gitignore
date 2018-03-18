@@ -3,5 +3,6 @@
 /out/*
 *.iml
 *.project
+*.classpath
 *.eml
 *.userlibraries
