@@ -17,10 +17,10 @@ public class Activities {
         String modifiedText = null;
         for (int i = 0; i < PrepareGUI.fields.jListAdd.getModel().getSize(); i++) {
             modifiedText = PrepareGUI.fields.jListAdd
-                            .getModel()
-                            .getElementAt(i)
-                            .toString()
-                            .replaceAll("\\s*\\([^)]*\\)\\s*", " ");
+                    .getModel()
+                    .getElementAt(i)
+                    .toString()
+                    .replaceAll("\\s*\\([^)]*\\)\\s*", " ");
         }
         secondModel.addElement(modifiedText);
     }
