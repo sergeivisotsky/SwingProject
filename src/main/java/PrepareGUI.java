@@ -27,10 +27,10 @@ public class PrepareGUI extends JFrame {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         fields.jButtonAdd.setText("Add");
-//        fields.jTextFieldAddText
-//                .addActionListener(
-//                        e -> fieldsActivities
-//                                .jButtonAddActionPerformed());
+        fields.jTextFieldAddText
+                .addActionListener(
+                        e -> fieldsActivities
+                                .jButtonAddActionPerformed());
         fields.jButtonAdd
                 .addActionListener(
                         e -> fieldsActivities
