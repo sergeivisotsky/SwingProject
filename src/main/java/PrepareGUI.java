@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.awt.*;
 
 import static javax.swing.LayoutStyle.ComponentPlacement;
 
