@@ -136,10 +136,4 @@ public class PrepareGUI extends JFrame {
 
         pack();
     }
-
-    public static void main(String[] args) {
-        EventQueue.invokeLater(
-                () -> new PrepareGUI().setVisible(true)
-        );
-    }
 }
