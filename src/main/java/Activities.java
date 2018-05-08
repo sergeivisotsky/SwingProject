@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
+import java.lang.reflect.Field;
 
 public class Activities {
     private DefaultListModel<String> firstModel = new DefaultListModel<>();
@@ -26,7 +27,10 @@ public class Activities {
     }
 
     public void jButtonDeleteActionPerformed() {
-        firstModel.clear();
+        int selectIndex = PrepareGUI.fields.jListAdd.getSelectedIndex();
+        if (selectIndex != -1) {
+            firstModel.remove(selectIndex);
+        }
     }
 
     public void jButtonClearActionPerformed() {
