@@ -1,6 +1,4 @@
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.lang.reflect.Field;
 
 public class Activities {
     private DefaultListModel<String> firstModel = new DefaultListModel<>();
