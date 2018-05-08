@@ -32,7 +32,4 @@ public class Activities {
     public void jButtonClearActionPerformed() {
         secondModel.clear();
     }
-
-    public void jTextFieldAddTextActionPerformed(ActionEvent e) {
-    }
 }
