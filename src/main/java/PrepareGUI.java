@@ -56,12 +56,6 @@ public class PrepareGUI extends JFrame {
                 .addActionListener(
                         e -> fieldsActivities
                                 .jButtonClearActionPerformed());
-
-        fields.jTextFieldAddText
-                .addActionListener(
-                        e -> fieldsActivities
-                                .jTextFieldAddTextActionPerformed(e));
-
         GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
