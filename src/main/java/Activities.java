@@ -14,7 +14,8 @@ public class Activities {
     public void jButtonRunActionPerformed() {
         PrepareGUI.fields.jListResult.setModel(secondModel);
         String modifiedText = null;
-        for (int i = 0; i < PrepareGUI.fields.jListAdd.getModel().getSize(); i++) {
+        for (int i = 0; i < PrepareGUI.fields.jListAdd
+                .getModel().getSize(); i++) {
             modifiedText = PrepareGUI.fields.jListAdd
                     .getModel()
                     .getElementAt(i)
@@ -25,9 +26,14 @@ public class Activities {
     }
 
     public void jButtonDeleteActionPerformed() {
-        int selectIndex = PrepareGUI.fields.jListAdd.getSelectedIndex();
-        if (selectIndex != -1) {
-            firstModel.remove(selectIndex);
+        if (PrepareGUI.fields.jListAdd
+                .getSelectedIndices().length > 0) {
+            int[] selectedIndices =
+                    PrepareGUI.fields
+                            .jListAdd.getSelectedIndices();
+            for (int i = selectedIndices.length - 1; i >= 0; i--) {
+                firstModel.removeElementAt(selectedIndices[i]);
+            }
         }
     }
 
